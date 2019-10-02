@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~normalize.css/normalize.css";
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, .full-height { height: 100%; }
+
+.row { display: flex; }
+
+.col-2 { width: 20%; }
+.col-8 { width: 80%; }
+
+.list-none {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  &.btn-nothing {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+.no-margin { margin: 0; }
+.no-margin-top { margin-top: 0; }
+.no-margin-bottom { margin-bottom: 0; }

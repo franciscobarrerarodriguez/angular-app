@@ -1,0 +1,30 @@
+<div class="full-height menu-left">
+
+  <div class="menu-header">
+    <a class="logo-container" [routerLink]="['/']">
+      <img src="assets/img/icons/logo_1.svg">
+    </a>
+  </div>
+
+  <div class="menu-profile">
+    <div class="menu-profile-pic">
+      <img src="assets/img/icons/profile_1.jpg">
+    </div>
+    <div class="profile-info">
+      <h3>Jhon Doe</h3>
+      <h5>Beneficiario</h5>
+    </div>
+  </div>
+
+  <div>
+    <hr class="menu-line">
+  </div>
+
+  <div>
+    <ul class="menu-list list-none">
+      <li class="menu-list-item" *ngFor="let menuItem of menuList">
+        <a href="">{{ menuItem.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

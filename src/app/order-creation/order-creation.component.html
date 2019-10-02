@@ -51,8 +51,56 @@
           <span class="step-badge">6</span>
         </div>
       </div>
-      
+
+      <hr class="container-line"/>
+
+      <div class="order-places">
+
+        <select name="" id="" class="select places-select">
+          <option value="">Cundinamarca</option>
+        </select>
+
+        <div class="row places-autocomplete-container">
+          <div class="icon-col">
+            <fa-icon [icon]="faMapPin"></fa-icon>
+          </div>
+          <div class="col input-col">
+            <input class="input input-autocomplete-place no-outline" type="text" placeholder="¿Donde te recogemos?"/>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="order-fav-container">
+
+        <h4>Favorites</h4>
+
+        <ul class="order-fav-list list-none">
+          <li class="order-fav-item">
+            <button class="btn btn-nothing order-fav-btn row">
+              <div class="icon-col">
+                <div class="fav-icon">
+                  <fa-icon [icon]="faStar"></fa-icon>
+                </div>
+              </div>
+              <div class="col fav-content">
+                <h4 class="no-margin">Casa</h4>
+                <h5 class="no-margin">Carrera 50b #64 - 43 </h5>
+              </div>
+            </button>
+          </li>
+        </ul>
+
+      </div>
+
     </div>
+
+    <div class="order-creation-footer">
+      <button class="btn btn-nothing next-btn">
+        <fa-icon [icon]="faArrowRight"></fa-icon>
+      </button>
+    </div>
+
 
   </div>
 

@@ -8,10 +8,15 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
 html, body, .full-height { height: 100%; }
 
 .row { display: flex; }
 
+.col { flex: 1; }
 .col-2 { width: 20%; }
 .col-8 { width: 80%; }
 
@@ -36,6 +41,17 @@ html, body, .full-height { height: 100%; }
   }
 }
 
+.select {
+  height: 40px;
+}
+
+.input {
+  height: 40px;
+  width: 100%;
+}
+
 .no-margin { margin: 0; }
 .no-margin-top { margin-top: 0; }
 .no-margin-bottom { margin-bottom: 0; }
+
+.no-outline { outline: none; }

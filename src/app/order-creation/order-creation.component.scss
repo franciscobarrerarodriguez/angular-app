@@ -158,5 +158,145 @@
   }
 }
 
+.container-line {
+  width: 85%;
+  height: 1px;
+  border: none;
+  background-color: lighten(gray, 35%);
+  margin: 20px 0 20px 0;
+}
+
+.order-places {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  .places-select {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    border: none;
+    background-color: transparent;
+
+    outline: none;
+  }
+}
+
+.places-autocomplete-container {
+
+  background-color: #2fd3a0;
+
+  .icon-col {
+    width: 12%;
+
+    padding-left: 5%;
+
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .input-col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 5%;
+  }
+}
+
+.input-autocomplete-place {
+  padding-top: 15px;
+  border: none;
+  border-bottom: 1px solid lighten(gray, 10%);
+
+  background-color: transparent;
+
+  color: lighten(gray, 10%);
+}
+
+.order-fav-container {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  padding-left: 5%;
+}
+
+.order-fav-list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .order-fav-item {
+    button {
+      padding-bottom: 20px;
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  .order-fav-item:last-of-type {
+    button {
+      padding-bottom: 0;
+    }
+  }
+  
+}
+
+.order-fav-btn {
+
+  .icon-col {
+    display: flex;
+    align-items: center;
+  }
+
+  .fav-icon {
+    height: 50px;
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    background-color: yellow;
+    color: darkgoldenrod;
+  }
+
+  .fav-content {
+    flex: 1;
+
+    padding: 10px 5% 10px 5%;
+
+    text-align: left;
+  }
+
+}
+
+.order-creation-footer {
+  padding: 15px 5% 15px 5%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  border-top: 1px solid lighten(gray, 35%);
+
+  -webkit-box-shadow: 0px -1px 3px 0px rgba(222,222,222,1);
+  -moz-box-shadow: 0px -1px 3px 0px rgba(222,222,222,1);
+  box-shadow: 0px -1px 3px 0px rgba(222,222,222,1);
+}
+
+.next-btn {
+  height: 50px;
+  width: 50px;
+
+  background-color: lighten(gray, 35%);
+  color: gray;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
 
 

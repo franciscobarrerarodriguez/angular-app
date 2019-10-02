@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faMapPin, faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-order-creation',
@@ -9,6 +9,9 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export class OrderCreationComponent implements OnInit {
 
   public faCoffee = faCoffee;
+  public faMapPin = faMapPin;
+  public faStar = faStar;
+  public faArrowRight = faArrowRight;
 
   constructor() { }
 

@@ -20,6 +20,13 @@ html, body, .full-height { height: 100%; }
 .col-2 { width: 20%; }
 .col-8 { width: 80%; }
 
+.menu-col {
+  @extend .col-2;
+  max-width: 273px;
+}
+
+.map-col { flex: 1; }
+
 .list-none {
   margin: 0;
   padding: 0;

@@ -23,7 +23,11 @@
   <div>
     <ul class="menu-list list-none">
       <li class="menu-list-item" *ngFor="let menuItem of menuList">
-        <a href="">{{ menuItem.name }}</a>
+        <a [routerLink]="['/']">
+          <i class="fa" [ngClass]="menuItem.icon"></i>
+          &nbsp;
+          <span>{{ menuItem.name }}</span>
+        </a>
       </li>
     </ul>
   </div>

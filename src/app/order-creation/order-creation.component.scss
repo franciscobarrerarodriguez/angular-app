@@ -46,7 +46,7 @@
     height: inherit;
     .head-bg-1,
     .head-bg-2 { flex: 1; }
-    .head-bg-1 { background-color: blue; }
+    .head-bg-1 { background-color: #6b81a4; }
   }
 }
 
@@ -104,12 +104,13 @@
   }
 
   &:hover {
+
     > * {
-      color: darken(green, 10%);
+      color: darken(#e1fcf5, 50%);
       transition: color ease .5s;
     }
     .badge-icon {
-      background-color: green;
+      background-color: #e1fcf5;
       transition: background-color ease .3s;
     }
   }
@@ -186,7 +187,7 @@
 
 .places-autocomplete-container {
 
-  background-color: #2fd3a0;
+  background-color: #e1fcf5;
 
   .icon-col {
     width: 12%;
@@ -198,9 +199,15 @@
   }
 
   .input-col {
+    position: relative;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 5%;
+    i {
+      position: absolute;
+      margin-top: 15px;
+      right: 5%;
+    }
   }
 }
 

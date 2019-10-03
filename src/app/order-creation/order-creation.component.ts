@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { faCoffee, faMapPin, faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { isUndefined } from 'util';
 
 @Component({
   selector: 'app-order-creation',
@@ -8,14 +9,33 @@ import { faCoffee, faMapPin, faStar, faArrowRight } from '@fortawesome/free-soli
 })
 export class OrderCreationComponent implements OnInit {
 
-  public faCoffee = faCoffee;
-  public faMapPin = faMapPin;
-  public faStar = faStar;
-  public faArrowRight = faArrowRight;
+  @Input()
+  set setLocation(location: any) {
+    if (!isUndefined(location)) {
+      this.location = location;
+      this.changeAddress();
+    }
+  }
+
+  public formOrder: FormGroup;
+  public location: any;
+  private loading: boolean = true;
 
   constructor() { }
 
   ngOnInit() {
+    this.initForm();
+  }
+
+  private changeAddress(): void {
+    this.loading = false;
+    this.formOrder.controls['address'].setValue(this.location.address);
+  }
+
+  private initForm(): void {
+    this.formOrder = new FormGroup({
+      address: new FormControl()
+    });
   }
 
 }

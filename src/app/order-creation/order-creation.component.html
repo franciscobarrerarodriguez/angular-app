@@ -1,6 +1,6 @@
 <div class="full-height vertical-center order-creation-container">
 
-  <div class="order-creation-card">
+  <form class="order-creation-card" [formGroup]="formOrder">
 
     <div class="order-creation-head">
 
@@ -11,23 +11,23 @@
 
       <div class="user-type-container">
 
-        <button class="user-type-btn btn btn-nothing">
+        <button class="user-type-btn btn btn-nothing" type="button">
           <div class="badge-icon">
-            <fa-icon [icon]="faCoffee"></fa-icon>
+            <i class="fa fa-user-o"></i>
           </div>
           <h6 class="user-type-title">Para mi</h6>
         </button>
 
-        <button class="user-type-btn btn btn-nothing">
+        <button class="user-type-btn btn btn-nothing" type="button">
           <div class="badge-icon">
-            <fa-icon [icon]="faCoffee"></fa-icon>
+            <i class="fa fa-users"></i>
           </div>
           <h6 class="user-type-title">Colega</h6>
         </button>
 
-        <button class="user-type-btn btn btn-nothing">
+        <button class="user-type-btn btn btn-nothing" type="button">
           <div class="badge-icon">
-            <fa-icon [icon]="faCoffee"></fa-icon>
+            <i class="fa fa-user-secret"></i>
           </div>
           <h6 class="user-type-title">Invitado</h6>
         </button>
@@ -62,10 +62,13 @@
 
         <div class="row places-autocomplete-container">
           <div class="icon-col">
-            <fa-icon [icon]="faMapPin"></fa-icon>
+            <i class="fa fa-map-pin fa-2x"></i>
           </div>
           <div class="col input-col">
-            <input class="input input-autocomplete-place no-outline" type="text" placeholder="¿Donde te recogemos?"/>
+            <input class="input input-autocomplete-place no-outline"
+                   type="text" placeholder="¿Donde te recogemos?"
+                   formControlName="address"/>
+            <i class="fa fa-circle-o-notch fa-spin fa-fw" [hidden]="!loading"></i>
           </div>
         </div>
 
@@ -77,10 +80,10 @@
 
         <ul class="order-fav-list list-none">
           <li class="order-fav-item">
-            <button class="btn btn-nothing order-fav-btn row">
+            <button class="btn btn-nothing order-fav-btn row" type="button">
               <div class="icon-col">
                 <div class="fav-icon">
-                  <fa-icon [icon]="faStar"></fa-icon>
+                  <i class="fa fa-star"></i>
                 </div>
               </div>
               <div class="col fav-content">
@@ -96,12 +99,12 @@
     </div>
 
     <div class="order-creation-footer">
-      <button class="btn btn-nothing next-btn">
-        <fa-icon [icon]="faArrowRight"></fa-icon>
+      <button class="btn btn-nothing next-btn" type="submit">
+       <i class="fa fa-arrow-right"></i>
       </button>
     </div>
 
 
-  </div>
+  </form>
 
 </div>
